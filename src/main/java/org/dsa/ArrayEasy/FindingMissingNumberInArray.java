@@ -1,6 +1,5 @@
 package org.dsa.ArrayEasy;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,5 +19,26 @@ public class FindingMissingNumberInArray {
             }
 
         }
+    // O(n) no extra space
+        int arrSum = 0;
+        for (int i = 0; i < n; i++) {
+            arrSum += array[i];
+        }
+        n = n+1; // coz actual n is = n+1, coz of missing number
+        int actualSum = (n*(n+1))/2;
+        int res = actualSum-arrSum;
+        System.out.println("missing number: "+res);
+
+        // another approach:
+        // XOR approach
+        n = array.length;
+        int xor = 0;
+        for (int i = 0; i <n; i++) {
+            xor = xor^array[i];
+            xor = xor^(i+1);
+        }
+        xor = xor^(n+1);
+        System.out.println(xor);
+
     }
 }
