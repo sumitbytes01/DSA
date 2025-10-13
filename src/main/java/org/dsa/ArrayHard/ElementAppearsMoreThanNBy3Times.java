@@ -9,6 +9,7 @@ public class ElementAppearsMoreThanNBy3Times {
     public static void main(String[] args) {
         int array[] = {11, 33, 33, 11, 33, 11};
         // O(n^2)
+        // at most 2 itesms can be such that they appears more than n/3 times
         List<Integer> list = new ArrayList<>();
         int n = array.length;
         for (int i = 0; i < n; i++) {
@@ -28,6 +29,7 @@ public class ElementAppearsMoreThanNBy3Times {
         System.out.println(list.get(0));
         System.out.println(list.get(1));
         System.out.println();
+
     // hashmap
         // // O(nlogn)
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -37,6 +39,15 @@ public class ElementAppearsMoreThanNBy3Times {
         for (Map.Entry<Integer,Integer> e: map.entrySet()){
             if(e.getValue()>n/3)
                 System.out.println(e.getKey());
+        }
+        System.out.println();
+        // hashmap Single iteration
+        // // O(nlogn)
+        HashMap<Integer,Integer> map1 = new HashMap<>();
+        for(int num: array){
+            map1.put(num, map1.getOrDefault(num,0)+1);
+            if(map1.get(num)>n/3)
+                System.out.println(num);
         }
         System.out.println();
     // MooreAlgo extension
