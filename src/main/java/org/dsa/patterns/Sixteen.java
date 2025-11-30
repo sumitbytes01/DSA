@@ -11,5 +11,6 @@ public class Sixteen {
             ch++;
             System.out.println();
         }
+        System.out.println("====================");
     }
 }

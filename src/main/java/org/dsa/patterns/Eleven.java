@@ -14,5 +14,17 @@ public class Eleven {
             }
             System.out.println();
         }
+        System.out.println("==============================");
+        int m = 5;
+        for (int i = 0; i <m; i++) {
+            int r = 1;
+            if(i%2 != 0)
+                r = 0;
+            for (int j = 0; j <=i ; j++) {
+                System.out.print(r);
+                r = 1-r;
+            }
+            System.out.println();
+        }
     }
 }

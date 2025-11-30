@@ -9,5 +9,12 @@ public class Eighteen {
             }
             System.out.println();
         }
+        System.out.println("====================");
+        for (int i = 0; i < n; i++) {
+            for (char ch = (char) ('A'+n-i-1); ch <= 'E'; ch++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
     }
 }
