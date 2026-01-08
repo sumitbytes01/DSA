@@ -7,6 +7,7 @@ public class FindingMissingNumberInArray {
     public static void main(String[] args) {
         int array[] = {1,2,4,5};
         Set<Integer> set = new HashSet<>();
+        // add array numbers to set
         for(int num: array){
             set.add(num);
         }

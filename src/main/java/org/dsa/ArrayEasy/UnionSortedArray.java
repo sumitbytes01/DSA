@@ -16,9 +16,11 @@ public class UnionSortedArray {
         int j = 0;
         int k = 0;
         while (i<m && j<n){
+            // move if duplicates
             while (i!=0 && arr1[i] == arr1[i-1] && i<m){
                 i++;
             }
+            // move if duplicates
             while (j!=0 && arr2[j] == arr2[j-1] && j<n){
                 j++;
             }

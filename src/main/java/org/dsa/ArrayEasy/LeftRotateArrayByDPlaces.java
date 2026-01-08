@@ -11,12 +11,13 @@ public class LeftRotateArrayByDPlaces {
         // Output: 6 7 1 2 3 4 5
 
         // temp array to story d places numbers
+        // put 6,7 in the tempArr
         int[] tempArr = new int[d];
         int count = 0;
         for (int i = n-d; i<n ; i++) {
             tempArr[count++] = array[i];
         }
-        //move the array 2 places to the right
+        // move the array 2 places to the right
         for (int i = n-1; i >=2 ; i--) {
             array[i] = array[i-d];
         }
