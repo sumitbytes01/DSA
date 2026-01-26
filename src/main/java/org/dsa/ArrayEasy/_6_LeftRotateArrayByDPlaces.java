@@ -2,14 +2,13 @@ package org.dsa.ArrayEasy;
 
 import java.util.Arrays;
 
-public class LeftRotateArrayByDPlaces {
+public class _6_LeftRotateArrayByDPlaces {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7};
         int d=2;
         int n = array.length;
         d = d%n;
         // Output: 6 7 1 2 3 4 5
-
         // temp array to story d places numbers
         // put 6,7 in the tempArr
         int[] tempArr = new int[d];

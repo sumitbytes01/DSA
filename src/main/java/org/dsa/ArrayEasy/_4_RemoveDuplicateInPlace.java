@@ -2,7 +2,7 @@ package org.dsa.ArrayEasy;
 
 import java.util.Arrays;
 
-public class RemoveDuplicateInPlace {
+public class _4_RemoveDuplicateInPlace {
     public static void main(String[] args) {
         int[] nums = {0,0,1,1,1,2,2,3,3,4};
         int i = 1;int j = 0;

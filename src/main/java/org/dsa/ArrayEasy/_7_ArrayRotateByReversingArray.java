@@ -2,7 +2,7 @@ package org.dsa.ArrayEasy;
 
 import java.util.Arrays;
 
-public class ArrayRotateByReversingArray {
+public class _7_ArrayRotateByReversingArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7};
         int d = 2;

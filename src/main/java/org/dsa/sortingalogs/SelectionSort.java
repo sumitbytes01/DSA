@@ -1,6 +1,5 @@
 package org.dsa.sortingalogs;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.Arrays;
 
 public class SelectionSort {
@@ -8,7 +7,7 @@ public class SelectionSort {
         // pick minimum element from the unsorted array and swap
         // with the first element of the unsorted array
         int[] arr = {5, 2, 77, 9, 11, 88, 90, 1, 5, 7, 3, 68};
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length - 1; i++) {
             // find min element index
             int minIdx = findMin(i, arr);
             // swap i and minIdx
@@ -27,8 +26,8 @@ public class SelectionSort {
 
     private static int findMin(int i, int[] arr) {
         int minIdx = i;
-        int minNum = Integer.MAX_VALUE;
-        for (int j = i; j < arr.length; j++) {
+        int minNum = arr[i];
+        for (int j = i+1; j < arr.length; j++) {
             if(arr[j]<minNum){
                 minIdx = j;
                 minNum = arr[j];

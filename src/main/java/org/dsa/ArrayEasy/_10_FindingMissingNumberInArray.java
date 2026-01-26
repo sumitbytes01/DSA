@@ -3,7 +3,7 @@ package org.dsa.ArrayEasy;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FindingMissingNumberInArray {
+public class _10_FindingMissingNumberInArray {
     public static void main(String[] args) {
         int array[] = {1,2,4,5};
         Set<Integer> set = new HashSet<>();
@@ -33,13 +33,11 @@ public class FindingMissingNumberInArray {
         // another approach:
         // XOR approach
         n = array.length;
-        int xor = 0;
-        for (int i = 0; i <n; i++) {
-            xor = xor^array[i];
-            xor = xor^(i+1);
+        int xor = 1;
+        for (int i = 1; i <n; i++) {
+            xor = i^array[i];
         }
         xor = xor^(n+1);
         System.out.println(xor);
-
     }
 }

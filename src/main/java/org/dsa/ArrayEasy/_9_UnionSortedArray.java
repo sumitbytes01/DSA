@@ -2,7 +2,7 @@ package org.dsa.ArrayEasy;
 
 import java.util.Arrays;
 
-public class UnionSortedArray {
+public class _9_UnionSortedArray {
     public static void main(String[] args) {
         // add all elements to map, extra space
         // add all elements to set, extra space

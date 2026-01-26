@@ -1,6 +1,6 @@
 package org.dsa.ArrayEasy;
 
-public class LargestElementArray {
+public class _1_LargestElementArray {
     public static void main(String[] args) {
         //Time Complexity: O(N*log(N))
         // sort and give n-1 number.

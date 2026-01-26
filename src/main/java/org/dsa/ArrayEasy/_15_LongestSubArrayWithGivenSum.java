@@ -1,9 +1,9 @@
 package org.dsa.ArrayEasy;
 
-public class LongestSubArrayWithGivenSum {
+public class _15_LongestSubArrayWithGivenSum {
     public static void main(String[] args) {
         int gSum = 10;
-        int array[] = {2,3,5,1,9};
+        int[] array = {2,3,5,1,9};
         int n = array.length;
         // 4 approaches
         // 1 find every subarray
@@ -17,7 +17,7 @@ public class LongestSubArrayWithGivenSum {
         while(end <n){
             while(sum>gSum && end>start){
                 sum = sum - array[start];
-                start = start+1;
+                start++;
             }
             if(sum == gSum){
                 max = Math.max(max, end-start+1);
