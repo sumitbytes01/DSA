@@ -2,7 +2,7 @@ package org.dsa.ArrayMedium;
 
 import java.util.Arrays;
 
-public class DutchNationalFlagAlgo {
+public class _3_DutchNationalFlagAlgo {
     public static void main(String[] args) {
         //0 to low-1 -> 0
         //low to mid-1 -> 1

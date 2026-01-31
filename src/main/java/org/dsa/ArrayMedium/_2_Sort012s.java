@@ -2,9 +2,9 @@ package org.dsa.ArrayMedium;
 
 import java.util.Arrays;
 
-public class Sort012s {
+public class _2_Sort012s {
     public static void main(String[] args) {
-        int nums[] = {2,0,2,1,1,0};
+        int[] nums = {2,0,2,1,1,0};
         //Output: [0,0,1,1,2,2]
         int zeroes = 0;
         int ones = 0;
