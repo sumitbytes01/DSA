@@ -2,7 +2,7 @@ package org.dsa.string;
 
 import java.util.Arrays;
 
-public class LargestCommonPrefix {
+public class _4_LargestCommonPrefix {
     public static void main(String[] args) {
         System.out.println(verticalScanning());
         System.out.println(sortWay());

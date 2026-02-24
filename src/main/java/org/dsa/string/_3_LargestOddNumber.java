@@ -1,6 +1,6 @@
 package org.dsa.string;
 
-public class LargestOddNumber {
+public class _3_LargestOddNumber {
     public static void main(String[] args) {
         System.out.println(largestOddNumber("4206"));
         System.out.println(largestOddNumber("52"));

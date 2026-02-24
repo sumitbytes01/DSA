@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class FourEuclideanAlgorithm {
+public class _4_EuclideanAlgorithm {
     public static void main(String[] args) {
         //O(min(N1, N2))
         //Repeatedly subtract the smaller number from the larger number until one of them becomes 0.

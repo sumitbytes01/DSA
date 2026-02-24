@@ -25,9 +25,10 @@ public class QuickSort {
         }
     }
 
-    private static int partitioningLogic(int[] arr, int i, int j) {
-        int pivot = arr[i];
-        int l = i;
+    private static int partitioningLogic(int[] arr, int l, int r) {
+        int pivot = arr[l];
+        int i = l;
+        int j = r;
         while (i<=j){
             while (pivot>=arr[i])
                 i++;

@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class FiveArmStrongNumber {
+public class _5_ArmStrongNumber {
     public static void main(String[] args) {
         //O(log10N + 1)
         int num = 153;

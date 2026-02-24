@@ -3,7 +3,7 @@ package org.dsa.string;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IsoMetricStrings {
+public class _5_IsoMorphicStrings {
     public static void main(String[] args) {
          System.out.println(checkIsometric());
         System.out.println(betterApproach());

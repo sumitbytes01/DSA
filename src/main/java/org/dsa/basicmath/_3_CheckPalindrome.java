@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class ThreeCheckPalindrome {
+public class _3_CheckPalindrome {
 
     public static void main(String[] args) {
         //O(log10N + 1)

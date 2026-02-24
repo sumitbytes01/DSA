@@ -1,13 +1,13 @@
 package org.dsa.ArrayMedium;
 
-public class RotateMatrix90Degree {
+public class _13_RotateMatrix90Degree {
     public static void main(String[] args) {
         int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
         // Output: [[7,4,1],[8,5,2],[9,6,3]]
-        // brute force
+        // brute force with extra space
         bruteForce(matrix);
         // second method
-        // transpose and reverse
+        // transpose and reverse rows
         int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
         transposeAndReverse(matrix2, matrix2.length, matrix2[0].length);
     }
@@ -22,7 +22,8 @@ public class RotateMatrix90Degree {
                 matrix2[i][j] = matrix2[j][i];
                 matrix2[j][i] = temp;
             }
-        }printMatrix(matrix2);
+        }
+        printMatrix(matrix2);
             // reverse matrix
             for (int i = 0; i < matrix2.length; i++) {
                 int start = 0, end = matrix2[i].length - 1;

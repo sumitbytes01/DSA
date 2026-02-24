@@ -1,13 +1,13 @@
 package org.dsa.ArrayMedium;
 
-public class RowColMatrixZero {
+public class _12_RowColMatrixZero {
     public static void main(String[] args) {
         int[][] matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         int row = matrix.length;
         int col = matrix[0].length;
         // no extra space
         int[][] matrixS1 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-        markRolColAsZeroNoExtraSpace(matrixS1);
+        //markRolColAsZeroNoExtraSpace(matrixS1);
         // n^2
         markRolColAsZero(matrix);
         int[][] matrixS = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
@@ -16,7 +16,12 @@ public class RowColMatrixZero {
             for (int j = 0; j < col; j++) {
                 if (matrixS[i][j] == 0) {
                     // mark row and col as -1
-                    markRowCol(matrixS, i, j);
+                    for (int k = 0; k <row ; k++) {
+                        matrixS[i][k] = -1;
+                    }
+                    for (int k = 0; k < col; k++) {
+                        matrixS[k][j] = -1;
+                    }
                 }
             }
         }
@@ -84,6 +89,7 @@ public class RowColMatrixZero {
     }
 
     private static void markRolColAsZero(int[][] matrix) {
+        System.out.println("====================");
         int row = matrix.length;
         int col = matrix.length;
         int[] colArr = new int[col];
@@ -107,12 +113,11 @@ public class RowColMatrixZero {
         }
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if(matrix[i][j] == -1)
-                    matrix[i][j] = 0;
                 System.out.print(matrix[i][j]);
             }
             System.out.println();
         }
+        System.out.println("====================");
     }
 
     private static void markRowCol(int[][] matrix, int m, int n) {

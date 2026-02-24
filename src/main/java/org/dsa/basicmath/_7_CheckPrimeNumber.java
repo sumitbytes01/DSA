@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class SevenCheckPrimeNumber {
+public class _7_CheckPrimeNumber {
     public static void main(String[] args) {
         int num = 17;
         boolean flag = false;

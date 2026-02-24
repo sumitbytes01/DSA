@@ -16,5 +16,12 @@ public class Eighteen {
             }
             System.out.println();
         }
+        System.out.println("====================");
+        for (int i = 0; i < n; i++) {
+            for (int j = 'E'-i; j <='E' ; j++) {
+                System.out.print((char)(j));
+            }
+            System.out.println();
+        }
     }
 }

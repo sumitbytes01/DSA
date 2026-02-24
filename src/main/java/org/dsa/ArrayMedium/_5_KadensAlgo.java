@@ -1,6 +1,6 @@
 package org.dsa.ArrayMedium;
 
-public class KadensAlgo {
+public class _5_KadensAlgo {
     public static void main(String[] args) {
          int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
          // maximumSubArraySum
@@ -12,7 +12,7 @@ public class KadensAlgo {
                 for (int k = i; k < j; k++) {
                     sum = sum+nums[k];
                 }
-                maxSum = Math.max(sum, maxSum);
+                    maxSum = Math.max(sum, maxSum);
             }
         }
         System.out.println(maxSum);
@@ -27,29 +27,17 @@ public class KadensAlgo {
         }
         System.out.println(maxSum);
 
-        // kaden's algo
+        // kadane's algo
         int sum = 0;
         maxSum = 0;
-        int starts = -1, ends = -1;
-        int start = 0;
         for (int i = 0; i < nums.length; i++) {
-            if(sum == 0){
-                start = i;
-            }
             sum = sum+nums[i];
-            if(sum>maxSum){
-                maxSum = sum;
-                starts = start;
-                ends = i;
-            }
+            maxSum = Math.max(maxSum, sum);
             if (sum <0){
                 sum = 0;
             }
         }
-        System.out.println(maxSum+" I J "+starts+" "+ends);
-        for (int i = starts; i <= ends; i++) {
-            System.out.println(nums[i]);
-        }
+        System.out.println(maxSum);
     }
 
 }

@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class FourGCD {
+public class _4_GCD {
     public static void main(String[] args) {
         //O(min(N1, N2))
         int n1 = 9, n2 = 12;

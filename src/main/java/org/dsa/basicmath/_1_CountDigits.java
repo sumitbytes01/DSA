@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class OneCountDigits {
+public class _1_CountDigits {
     public static void main(String[] args) {
         // O(logn+1)
         int num = 123432345;

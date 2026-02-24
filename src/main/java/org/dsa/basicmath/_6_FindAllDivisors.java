@@ -1,6 +1,6 @@
 package org.dsa.basicmath;
 
-public class SixAllDivisors {
+public class _6_FindAllDivisors {
     public static void main(String[] args) {
         //O(N)
         int num = 36;

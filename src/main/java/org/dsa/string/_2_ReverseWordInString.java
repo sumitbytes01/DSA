@@ -1,6 +1,6 @@
 package org.dsa.string;
 
-public class ReverseWordInString {
+public class _2_ReverseWordInString {
     public static void main(String[] args) {
         String str = "Hello World from DSA";
         String str1 = "a good   example";
