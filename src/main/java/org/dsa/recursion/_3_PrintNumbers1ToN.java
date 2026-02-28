@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class ThreePrintNumbers1ToN {
+public class _3_PrintNumbers1ToN {
     public static void main(String[] args) {
         parameterApproach(1,10);
         System.out.println();

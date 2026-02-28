@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class FiveSumOfFirstNNaturalNumbers {
+public class _5_SumOfFirstNNaturalNumbers {
     public static void main(String[] args) {
         //O(1)
         int n = 10;

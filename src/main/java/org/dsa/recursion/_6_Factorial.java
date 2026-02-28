@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class SixFactorial {
+public class _6_Factorial {
     public static void main(String[] args) {
         int num =5;
         int res = 1;

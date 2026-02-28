@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class FourPrintNTo1Recursion {
+public class _4_PrintNTo1Recursion {
     public static void main(String[] args) {
         printNTo1Parameter(10);
         System.out.println();

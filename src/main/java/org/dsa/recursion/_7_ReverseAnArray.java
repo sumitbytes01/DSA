@@ -2,7 +2,7 @@ package org.dsa.recursion;
 
 import java.util.Arrays;
 
-public class SevenReverseAnArray {
+public class _7_ReverseAnArray {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9};
         reverseAnArray(arr);
@@ -12,6 +12,18 @@ public class SevenReverseAnArray {
         int[] arr1 = {1,2,3,4,5,6,7,8,9};
         reverseArrayRecursionParam(arr1,0,arr1.length-1);
         printArray(arr1);
+        System.out.println("==============");
+        int[] arr2 = {1,2,3,4,5,6,7,8,9};
+        reverseArrayRecursionSingleParam(arr2, 0, arr2.length);
+        printArray(arr2);
+        System.out.println("==============");
+    }
+
+    private static void reverseArrayRecursionSingleParam(int[] arr2, int i, int n) {
+        if(i>n/2)
+            return;
+        swap(arr2, i,n-i-1);
+        reverseArrayRecursionSingleParam(arr2, i+1, n);
     }
 
     private static void reverseArrayRecursionParam(int[] arr, int start, int end) {

@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class NineFibonacci {
+public class _9_Fibonacci {
     public static void main(String[] args) {
         int first = 0;
         int second = 1;

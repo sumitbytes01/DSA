@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class OnerPrintingSomethingNTimes {
+public class _1_PrintingSomethingNTimes {
     public static void main(String[] args) {
         int n = 10;
         printTillN(10);

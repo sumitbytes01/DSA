@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class TwoPrintNameNTimes {
+public class _2_PrintNameNTimes {
     public static void main(String[] args) {
         String name = "Thiya";
         printNameNTimes(1, name);

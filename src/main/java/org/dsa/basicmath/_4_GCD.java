@@ -16,6 +16,7 @@ public class _4_GCD {
         for (int i = Math.min(n1,n2); i>1; i--) {
             if(n1%i==0 && n2%i==0){
                 gcd = i;
+                break;
             }
         }
         System.out.println(gcd);

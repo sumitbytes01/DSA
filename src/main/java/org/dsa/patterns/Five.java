@@ -7,7 +7,7 @@ public class Five {
             for (int j = n-i; j >0 ; j--) {
                 System.out.print("*");
             }
-            System.out.println();
+            System.out.println("======================");
         }
 
         for (int i = n; i >0 ; i--) {

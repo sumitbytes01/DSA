@@ -1,6 +1,6 @@
 package org.dsa.recursion;
 
-public class EightCheckIfStringIsPalindrome {
+public class _8_CheckIfStringIsPalindrome {
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
         StringBuffer sb = new StringBuffer();
@@ -10,6 +10,7 @@ public class EightCheckIfStringIsPalindrome {
         }
         String str = sb.toString().toLowerCase();
         System.out.println(str);
+        System.out.println(sb.reverse());
         int l = 0;
         int r = str.length()-1;
         while (l < r) {
