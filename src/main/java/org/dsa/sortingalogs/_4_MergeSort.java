@@ -2,7 +2,7 @@ package org.dsa.sortingalogs;
 
 import java.util.Arrays;
 
-public class MergeSort {
+public class _4_MergeSort {
     public static void main(String[] args) {
         // divide and concur
         int[] arr = {5, 2, 77, 9, 11, 88, 90, 1, 5, 7, 3, 68};

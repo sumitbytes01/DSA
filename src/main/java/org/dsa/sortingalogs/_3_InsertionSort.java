@@ -2,7 +2,7 @@ package org.dsa.sortingalogs;
 
 import java.util.Arrays;
 
-public class InsertionSort {
+public class _3_InsertionSort {
     public static void main(String[] args) {
         // array is divided into sorted and unsorted parts
         // one element is picked from the unsorted array and put in the correct place of the sorted array

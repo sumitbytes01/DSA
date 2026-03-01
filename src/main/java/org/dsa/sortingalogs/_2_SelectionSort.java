@@ -2,7 +2,7 @@ package org.dsa.sortingalogs;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class _2_SelectionSort {
     public static void main(String[] args) {
         // pick minimum element from the unsorted array and swap
         // with the first element of the unsorted array
