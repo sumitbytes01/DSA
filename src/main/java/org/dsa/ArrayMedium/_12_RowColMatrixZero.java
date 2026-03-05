@@ -9,8 +9,8 @@ public class _12_RowColMatrixZero {
         int[][] matrixS1 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         //markRolColAsZeroNoExtraSpace(matrixS1);
         // n^2
-        markRolColAsZero(matrix);
-        int[][] matrixS = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+       // markRolColAsZero(matrix);
+        int[][] matrixS = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
         // n^3
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
@@ -91,7 +91,7 @@ public class _12_RowColMatrixZero {
     private static void markRolColAsZero(int[][] matrix) {
         System.out.println("====================");
         int row = matrix.length;
-        int col = matrix.length;
+        int col = matrix[0].length;
         int[] colArr = new int[col];
         int[] rowArr = new int[row];
         for (int i = 0; i < row; i++) {

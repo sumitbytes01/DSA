@@ -6,7 +6,7 @@ public class _6_KadanesWithArrayIdx {
         int max = Integer.MIN_VALUE;
         int sum = 0;
         int start =0;
-        int tempStart =0;
+        int tempStart  =0;
         int end = -1;
         for (int i = 0; i < nums.length; i++) {
             sum = sum+nums[i];

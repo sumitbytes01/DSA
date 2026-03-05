@@ -1,6 +1,6 @@
 package org.dsa.ArrayMedium;
 
-public class MooreAlgo {
+public class _4_MooreAlgo {
     public static void main(String[] args) {
         int nums[] = {3,2,3};
         int count = 1;

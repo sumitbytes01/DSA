@@ -12,6 +12,6 @@ public class _4_RemoveDuplicateInPlace {
                 nums[j] = nums[i];
             }
         }
-        Arrays.stream(nums).forEach(System.out::println);
+        Arrays.stream(nums).limit(j+1).forEach(System.out::println);
     }
 }

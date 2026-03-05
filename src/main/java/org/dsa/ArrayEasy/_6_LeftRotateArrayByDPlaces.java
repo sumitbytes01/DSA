@@ -17,7 +17,7 @@ public class _6_LeftRotateArrayByDPlaces {
             tempArr[count++] = array[i];
         }
         // move the array 2 places to the right
-        for (int i = n-1; i >=2 ; i--) {
+        for (int i = n-1; i >=d ; i--) {
             array[i] = array[i-d];
         }
         for (int i = 0; i < d; i++) {

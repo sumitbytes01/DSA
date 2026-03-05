@@ -1,11 +1,11 @@
 package org.dsa.ArrayMedium;
 
-public class SpiralMatrix {
+public class _14_SpiralMatrix {
     public static void main(String[] args) {
-        int matrix[][] = {{1, 2, 3, 4},
-                          {5, 6, 7, 8},
-                          {9, 10, 11, 12},
-                          {13, 14, 15, 16}};
+        int matrix[][] = {{1,   2,  3, 4},
+                          {12, 13, 14, 5},
+                          {11, 16, 15, 6},
+                          {10,  9,  8, 7}};
         int rows = matrix.length;
         int cols = matrix[0].length;
         int top = 0;
@@ -23,7 +23,7 @@ public class SpiralMatrix {
                 System.out.println(matrix[i][right]);
             }
             right--;
-            // left to right
+            // right to left
             if (top <= bottom) {
                 for (int i = right; i >= left; i--) {
                     System.out.println(matrix[bottom][i]);

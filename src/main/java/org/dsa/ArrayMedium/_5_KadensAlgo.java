@@ -29,7 +29,7 @@ public class _5_KadensAlgo {
 
         // kadane's algo
         int sum = 0;
-        maxSum = 0;
+        maxSum = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {
             sum = sum+nums[i];
             maxSum = Math.max(maxSum, sum);

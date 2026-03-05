@@ -37,21 +37,26 @@ public class _11_LongestConsecutiveSequence {
         System.out.println(maxCount);
     }
 
-    private static void betterApproach(int[] nums) {
-        int[] nums1 = nums;
-        Arrays.sort(nums1);
-        int n = nums1.length;
+    private static void betterApproach(int[] nums1) {
+        int[] nums = {1,0,1,2};
+        Arrays.sort(nums);
+        int longest = 1;
         int count = 1;
-        int maxCount = 0;
-        for (int i = 1; i <n ; i++) {
-            if(nums1[i] == nums1[i-1]+1){
+        for(int i = 1; i< nums.length; i++){
+            if(nums[i-1] + 1 == nums[i])
+            {
                 count++;
-                maxCount = Math.max(maxCount, count);
+                longest = Math.max(count, longest);
+            }
+            else if(nums[i-1] == nums[i])
+            {
+                count++;
+                continue;
             }
             else
                 count = 1;
         }
-        System.out.println(maxCount);
+        System.out.println("Max count:: "+ longest);
 
     }
 

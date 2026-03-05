@@ -3,7 +3,7 @@ package org.dsa.ArrayMedium;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NumberOfSubarrayWithSumK {
+public class _15_NumberOfSubarrayWithSumK {
     public static void main(String[] args) {
         int array[] = {3, 1, 2, 4};
         int k = 6;

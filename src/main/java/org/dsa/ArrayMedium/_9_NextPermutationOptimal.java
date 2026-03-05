@@ -8,7 +8,7 @@ public class _9_NextPermutationOptimal {
         //Then again traverse from the end to find the first digit greater than the breaking point digit and swap them.
         //Finally, reverse the part of the array to the right of the breaking point to get the smallest next permutation.
         //If no such breaking point exists (entire array is descending), just reverse the whole array.
-        int[] arr = {1,2,3,6,5,4};
+        int[] arr = {2,1,5,4,3,0,0};
         int n = arr.length;
 
         //Traverse from the end and find the first index where the current digit is smaller than the next one (this is the "breaking point").
