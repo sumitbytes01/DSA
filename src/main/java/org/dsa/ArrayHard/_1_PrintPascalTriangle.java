@@ -1,6 +1,6 @@
 package org.dsa.ArrayHard;
 
-public class PrintPascalTriangle {
+public class _1_PrintPascalTriangle {
     public static void main(String[] args) {
         // bruteForce
         // O(n^3)

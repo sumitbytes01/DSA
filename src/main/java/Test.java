@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +9,27 @@ import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
+
+        // primitive array to list:
+        int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Arrays.stream(number).boxed().toList();
+        // java 8 fibonacci
+        Stream.iterate(new int[]{0,1}, n-> n[0] <14,n -> new int[]{n[1], n[0]+n[1]})
+                .map(n->n[0])
+                .forEach(System.out::println);
+        System.out.println("==============================================================================");
+        // sum all fibonacci
+        int sum = Stream.iterate(new int[]{0,1}, n -> new int[]{n[1], n[0]+n[1]})
+                .limit(20)
+                .map(n->n[0])
+                .reduce(0,Integer::sum);
+        System.out.println(sum);
+        List<String> list = Arrays.asList("java", "python");
+
+        list.stream()
+                .flatMap(s -> Arrays.stream(s.split("")))
+                .forEach(System.out::println);
+
 
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "linode");
@@ -21,7 +43,7 @@ public class Test {
                 .collect(Collectors.joining(","));
         System.out.println(result1);
 
-        List<String> list = Arrays.asList("Java", "Node", "JavaScript", "Rust", "Go");
+        List<String> list2 = Arrays.asList("Java", "Node", "JavaScript", "Rust", "Go");
         IntStream.range(0, list.size()).forEach(x -> System.out.println(x+" "+list.get(x)));
 
         String[] s1 = new String[]{"a", "b", "c"};

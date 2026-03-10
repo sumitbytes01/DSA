@@ -1,6 +1,9 @@
 package org.dsa.ArrayHard;
 
-public class PascalTriangleAllBest {
+import java.util.ArrayList;
+import java.util.List;
+
+public class _1_PascalTriangleAllBest {
     public static void main(String[] args) {
         // find nth row and rth col
         // n-1 r-1
@@ -24,12 +27,12 @@ public class PascalTriangleAllBest {
         }
         System.out.println();
         // print the entire triangle
-        for (int j = 1; j < 7 ; j++) {
+        for (int j = 1; j <= 7; j++) {
             res = 1;
             System.out.print(res + " ");
-            for (int i = 0; i < j - 1; i++) {
-                res = res * (j - i - 1);
-                res = res / (i + 1);
+            for (int i = 1; i < j; i++) {
+                res = res * (j - i);
+                res = res / (i);
                 System.out.print(res + " ");
             }
             System.out.println();

@@ -1,6 +1,6 @@
 package org.dsa.ArrayHard;
 
-public class PascalTrianglePrintARow {
+public class _1_PascalTrianglePrintARow {
     public static void main(String[] args) {
         // brute force
         bruteForce();
