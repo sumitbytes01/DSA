@@ -1,9 +1,8 @@
 package org.dsa.ArrayHard;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
-public class LongestSubArrayZeroSum {
+public class _5_LongestSubArrayZeroSum {
     public static void main(String[] args) {
         bruteForce();
         betterApproach();

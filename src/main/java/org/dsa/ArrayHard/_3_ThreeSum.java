@@ -2,7 +2,7 @@ package org.dsa.ArrayHard;
 
 import java.util.*;
 
-public class ThreeSum {
+public class _3_ThreeSum {
     public static void main(String[] args) {
         bruteForce();
         betterApproach();
@@ -12,7 +12,7 @@ public class ThreeSum {
     private static void optimalApproach() {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         int n = nums.length;
-        Set<List<Integer>> finalList = new HashSet<>();
+        List<List<Integer>> finalList = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < n; i++) {
             if (i!=0 && nums[i] == nums[i-1]){
@@ -28,15 +28,13 @@ public class ThreeSum {
                     k--;
                 }
                 else {
-                    List<Integer> list = Arrays.asList(nums[i], nums[j], nums[k]);
-                    list.sort(Comparator.naturalOrder());
-                    finalList.add(list);
+                    finalList.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
                     k--;
                     // skip the duplicates
                     while (j<k && nums[j] == nums[j-1])
                         j++;
-                    while (k != n-1 && j<k && nums[k] == nums[k+1])
+                    while (j<k && nums[k] == nums[k+1])
                         k--;
                 }
             }
@@ -49,18 +47,16 @@ public class ThreeSum {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         int n = nums.length;
         Set<List<Integer>> finalList = new HashSet<>();
-        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            map.put(nums[i], i);
-        }
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j <n; j++) {
+            Set<Integer> set = new HashSet<>();
+            for (int j = i+1; j <n; j++) {
                 int target = -(nums[i] + nums[j]);
-                if (map.containsKey(target) && map.get(target) != i && map.get(target) != j && i != j) {
+                if (set.contains(target)) {
                     List<Integer> list = Arrays.asList(nums[i], nums[j], target);
                     list.sort(Comparator.naturalOrder());
                     finalList.add(list);
                 }
+                set.add(nums[j]);
             }
         }
         System.out.println(finalList);

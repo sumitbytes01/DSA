@@ -5,11 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ElementAppearsMoreThanNBy3Times {
+public class _2_ElementAppearsMoreThanNBy3Times {
     public static void main(String[] args) {
         int array[] = {11, 33, 33, 11, 33, 11};
         // O(n^2)
-        // at most 2 itesms can be such that they appears more than n/3 times
+        // at most 2 items can be such that they appear more than n/3 times
         List<Integer> list = new ArrayList<>();
         int n = array.length;
         for (int i = 0; i < n; i++) {
@@ -31,7 +31,7 @@ public class ElementAppearsMoreThanNBy3Times {
         System.out.println();
 
     // hashmap
-        // // O(nlogn)
+        // O(nlogn)
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int num: array){
             map.put(num, map.getOrDefault(num,0)+1);
@@ -43,6 +43,18 @@ public class ElementAppearsMoreThanNBy3Times {
         System.out.println();
         // hashmap Single iteration
         // // O(nlogn)
+        /*List<Integer> list = new ArrayList();
+        int len = nums.length;
+        HashMap<Integer, Integer> freqMap = new HashMap();
+        for(int n : nums){
+            freqMap.put(n, freqMap.getOrDefault(n,0)+1);
+            if(freqMap.get(n) > len/3 && (list.size() == 0 || list.get(0) != n)){
+                list.add(n);
+            }
+            if(list.size()==2)
+                break;
+        }
+    return list;*/
         HashMap<Integer,Integer> map1 = new HashMap<>();
         for(int num: array){
             map1.put(num, map1.getOrDefault(num,0)+1);

@@ -1,8 +1,8 @@
 package org.dsa.ArrayHard;
 
-import java.util.ArrayList;
-import java.util.List;
-
+// remember 2 things in pascal's triangle:
+// one is ncr formula and its shortcut
+// another one is for row how to create formula using ncr
 public class _1_PascalTriangleAllBest {
     public static void main(String[] args) {
         // find nth row and rth col

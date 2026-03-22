@@ -9,7 +9,7 @@ public class _1_PascalTrianglePrintARow {
     }
 
     private static void bestSolution() {
-        int row = 6;
+        int row = 5;
         int ans = 1;
         System.out.print(ans+ " ");
         for (int i = 1; i < row; i++) {
@@ -27,7 +27,7 @@ public class _1_PascalTrianglePrintARow {
                 res = (row-1-i)*res;
                 res = res/(i+1);
             }
-            System.out.println(res+ " ");
+            System.out.println(res + " ");
             res = 1;
         }
     }

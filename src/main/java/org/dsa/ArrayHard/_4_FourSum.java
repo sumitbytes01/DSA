@@ -2,7 +2,7 @@ package org.dsa.ArrayHard;
 
 import java.util.*;
 
-public class FourSum {
+public class _4_FourSum {
     public static void main(String[] args) {
         bruteForce();
         betterSolution();

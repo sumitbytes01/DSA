@@ -1,11 +1,10 @@
 package org.dsa.ArrayHard;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class SubArraysWithGivenXor {
+public class _6_SubArraysWithGivenXor {
     public static void main(String[] args) {
         bruteForce();
         betterApproach();
