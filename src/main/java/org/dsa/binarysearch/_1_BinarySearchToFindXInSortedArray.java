@@ -1,6 +1,6 @@
 package org.dsa.binarysearch;
 
-public class BinarySearchToFindXInSortedArray {
+public class _1_BinarySearchToFindXInSortedArray {
     public static void main(String[] args) {
         // iterative implementation
         iterativeImplementation();
@@ -29,8 +29,8 @@ public class BinarySearchToFindXInSortedArray {
         int n = nums.length;
         int target = 6;
         int l = 0;
-        int r = n;
-        while (l < r) {
+        int r = n-1;
+        while (l <= r) {
             int mid = l + (r - l) / 2;
             if (nums[mid] == target)
                 System.out.println("Index is " + mid);

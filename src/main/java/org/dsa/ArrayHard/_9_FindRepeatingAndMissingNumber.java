@@ -1,15 +1,35 @@
 package org.dsa.ArrayHard;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
-public class FindRepeatingAndMissingNumber {
+public class _9_FindRepeatingAndMissingNumber {
     public static void main(String[] args) {
         int array[] = {3,1,2,5,3};
         extremeBruteForce();
-       // bruteForce(array);
-        //hashing();
+        bruteForce(array);
+        hashing();
+        int[] ans = mathematical();
+        System.out.println(ans[0]+" "+ans[1]);
+    }
+
+    private static int[] mathematical() {
+        int[] array = {3,1,2,5,3};
+        int n = array.length;
+        int sn =  n*(n+1)/2;
+        int sn2 = n*(n+1)*(2*n+1)/6;
+
+        int sum = 0;
+        int squaresSum = 0;
+        for(int i: array){
+            sum = sum+i;
+            squaresSum = squaresSum+i*i;
+        }
+        int val1 = sum -sn;
+        int val2 = squaresSum - sn2;
+        val2 = val2/val1;
+        int x = (val1+val2)/2;
+        int y = x-val1;
+        return new int[]{x, y};
     }
 
     private static void extremeBruteForce() {
@@ -31,7 +51,7 @@ public class FindRepeatingAndMissingNumber {
     }
 
     private static void hashing() {
-        int array[] = {3,1,2,5,4,6,7,5};
+        int[] array = {3,1,2,5,4,6,7,5};
         int n = array.length;
         int[] res = new int[n+1];
         for (int i = 0; i < n; i++) {
