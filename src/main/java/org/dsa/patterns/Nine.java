@@ -5,7 +5,9 @@ public class Nine {
         int n = 5;
         simpleApproach(n);
         betterApproach(n);
+
     }
+
 
     private static void betterApproach(int n) {
         int count = 0;
