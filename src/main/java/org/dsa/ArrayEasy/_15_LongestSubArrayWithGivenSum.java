@@ -9,7 +9,7 @@ public class _15_LongestSubArrayWithGivenSum {
         // 1 find every subarray
         // 2 optimize find all subarrays approach
         // 3 prefix sum
-        // 4 two pointer
+        // 4 two pointer - this approach do not work for -ve values
         int end = 0;
         int start = 0;
         int sum = array[0];
@@ -21,7 +21,7 @@ public class _15_LongestSubArrayWithGivenSum {
             }
             if(sum==gSum){
                 maxLen = Math.max(maxLen, end-start+1);
-                System.out.println(start+"-"+end+" Len: "+maxLen);
+                System.out.println(start + "-" + end + " Len: " + maxLen);
             }
             end++;
             if(end<n){
