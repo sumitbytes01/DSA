@@ -11,7 +11,8 @@ public class TwentyTwo {
                 int left = j;
                 int right = 2*n-1-1-j;
                 int bottom = 2*n-1-1-i;
-                System.out.print(4-Math.min(bottom,Math.min(left,Math.min(right,top))));
+                //System.out.print(Math.min(bottom,Math.min(left,Math.min(right,top))));
+                System.out.print(top+" "+bottom+" "+left+" "+right+", ");
             }
             System.out.println();
         }
