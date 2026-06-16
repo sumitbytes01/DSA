@@ -2,7 +2,7 @@ package org.dsa.sortingalogs;
 
 import java.util.Arrays;
 
-public class _5_QuickSort {
+public class _4_QuickSort {
     public static void main(String[] args) {
         // pick a pivot element. 1st position index.
         // find its place in the array, by using i and j such that pivot is greater than i and smaller than j

@@ -11,6 +11,7 @@ public class _4_GCD {
             }
         }
         System.out.println(gcd);
+        // below one is slightly better because GCD is the highest common divisor. that can be made better by iterating backwards
         //O(min(N1, N2))
         gcd = 1;
         for (int i = Math.min(n1,n2); i>1; i--) {
