@@ -36,15 +36,19 @@ public class _15_NumberOfSubarrayWithSumK {
         System.out.println(count);
         count = 0;
         // prefix sum
-        int sum = 0;
         Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1); // To account for subarrays starting at index 0
-        for (int i = 0; i < n; i++) {
-            sum += array[i];
-            if (map.containsKey(sum - k)) {
-                count += map.get(sum - k);
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum+array[i];
+            if(sum == k)
+                count++;
+            int rem = sum - k;
+            if(map.containsKey(rem)){
+                count = count+map.get(rem);
             }
-            map.put(sum, map.getOrDefault(sum, 0) + 1);
+            if(!map.containsKey(sum)){
+                map.put(sum, map.getOrDefault(sum, 0) + 1);
+            }
         }
         System.out.println(count);
     }

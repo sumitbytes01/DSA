@@ -2,62 +2,58 @@ package org.dsa.ArrayMedium;
 
 public class _13_RotateMatrix90Degree {
     public static void main(String[] args) {
-        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-        // Output: [[7,4,1],[8,5,2],[9,6,3]]
-        // brute force with extra space
-        bruteForce(matrix);
-        // second method
-        // transpose and reverse rows
-        int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
-        transposeAndReverse(matrix2, matrix2.length, matrix2[0].length);
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        bruteForce(matrix); // n^2 space
+        matrix = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        optimalSolution(matrix);
     }
 
-    private static void transposeAndReverse(int[][] matrix2, int rows, int cols) {
-        printMatrix(matrix2);
-        //transpose
-        for (int i = 0; i < rows-1; i++) {
-            for (int j = i + 1; j < cols; j++) {
-                // swap
-                int temp = matrix2[i][j];
-                matrix2[i][j] = matrix2[j][i];
-                matrix2[j][i] = temp;
-            }
-        }
-        printMatrix(matrix2);
-            // reverse matrix
-            for (int i = 0; i < matrix2.length; i++) {
-                int start = 0, end = matrix2[i].length - 1;
-                while (start < end) {
-                    int temp = matrix2[i][start];
-                    matrix2[i][start] = matrix2[i][end];
-                    matrix2[i][end] = temp;
-                    start++;
-                    end--;
-                }
-            }
-        printMatrix(matrix2);
-        }
-
-    private static void bruteForce(int[][] matrix) {
-        // next time draw the matrix to calculate the calculations
-        // O(n^2) both time and space
+    private static void optimalSolution(int[][] matrix) {
+        printMatrix(matrix);
         int rows = matrix.length;
         int cols = matrix[0].length;
-        int newMatrix[][] = new int[rows][cols];
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                newMatrix[j][rows-i-1] = matrix[i][j];
-                System.out.println(newMatrix[rows-1-i][cols-j-1]);
+            for (int j = i + 1; j < cols; j++) {
+                if (i != j) {
+                    int temp = matrix[i][j];
+                    matrix[i][j] = matrix[j][i];
+                    matrix[j][i] = temp;
+                }
             }
         }
-        printMatrix(newMatrix);
+        printMatrix(matrix);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols/2; j++) { // else you will swap each element twice.
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][cols-j-1];
+                matrix[i][cols-j-1] = temp;
+            }
+        }
+        printMatrix(matrix);
     }
-    private static void printMatrix(int[][] matrix){
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                System.out.print(matrix[i][j]);
+
+    private static void bruteForce(int[][] matrix) {
+        printMatrix(matrix);
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] ansMatrix = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                ansMatrix[j][rows - i - 1] = matrix[i][j];
+            }
+        }
+        printMatrix(ansMatrix);
+    }
+
+    private static void printMatrix(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        for (int[] ints : matrix) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(ints[j] + " ");
             }
             System.out.println();
         }
+        System.out.println("============================");
     }
 }

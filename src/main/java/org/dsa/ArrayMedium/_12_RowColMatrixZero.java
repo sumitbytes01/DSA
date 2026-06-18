@@ -1,134 +1,118 @@
 package org.dsa.ArrayMedium;
 
 public class _12_RowColMatrixZero {
-    public static void main(String[] args) {
+    static void main() {
         int[][] matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-        int row = matrix.length;
-        int col = matrix[0].length;
-        // no extra space
-        int[][] matrixS1 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-        //markRolColAsZeroNoExtraSpace(matrixS1);
-        // n^2
-       // markRolColAsZero(matrix);
-        int[][] matrixS = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
-        // n^3
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (matrixS[i][j] == 0) {
-                    // mark row and col as -1
-                    for (int k = 0; k <row ; k++) {
-                        matrixS[i][k] = -1;
-                    }
-                    for (int k = 0; k < col; k++) {
-                        matrixS[k][j] = -1;
-                    }
-                }
-            }
-        }
-
-        // print:
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if(matrixS[i][j] == -1)
-                    matrixS[i][j] = 0;
-                System.out.print(matrixS[i][j]);
-            }
-            System.out.println();
-        }
+        bruteForce(matrix);
+        matrix = new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        betterApproach(matrix);
+        matrix = new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        optimalApproach(matrix);
     }
 
-    private static void markRolColAsZeroNoExtraSpace(int[][] matrix) {
-        int row = matrix.length;
-        int col = matrix.length;
+    private static void optimalApproach(int[][] matrix) {
+        printMatrix(matrix);
+        int rows = matrix.length;
+        int cols = matrix[0].length;
         int col0 = 1;
-        int[] colArr = new int[col];
-        int[] rowArr = new int[row];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if(matrix[i][j] == 0)
-                {
-                    // mark the ith row
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if(matrix[i][j] == 0){
                     matrix[i][0] = 0;
-                    // mark the jth col
-                    if(j !=0)
+                    if(j!=0)
                         matrix[0][j] = 0;
                     else
                         col0 = 0;
                 }
             }
         }
-        for (int i = 1; i < row; i++) {
-            for (int j = 1; j < col; j++) {
-                if(matrix[i][j] != 0)
-                {
-                    // check for rows and column
-                    if(matrix[i][0] == 0 || matrix[0][j] == 0){
+        for (int i = 1; i < rows; i++) {
+            for (int j = 1; j < cols; j++) {
+                if(matrix[i][j] != 0){
+                    if(matrix[0][j] == 0 || matrix[i][0] ==0){
                         matrix[i][j] = 0;
                     }
                 }
             }
         }
-        if(matrix[0][0] == 0){
-            for (int j = 0; j < col; j++) {
-                matrix[0][j] = 0;
+        if(matrix[0][0] ==0){
+            for (int i = 0; i < cols; i++) {
+                matrix[0][i] = 0;
             }
         }
         if(col0 == 0){
-            for (int i = 0; i < col; i++) {
+            for (int i = 0; i < rows; i++) {
                 matrix[i][0] = 0;
             }
         }
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if(matrix[i][j] == -1)
-                    matrix[i][j] = 0;
-                System.out.print(matrix[i][j]);
-            }
-            System.out.println();
-        }
+        System.out.println("============================");
+        printMatrix(matrix);
     }
 
-    private static void markRolColAsZero(int[][] matrix) {
-        System.out.println("====================");
-        int row = matrix.length;
-        int col = matrix[0].length;
-        int[] colArr = new int[col];
-        int[] rowArr = new int[row];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if(matrix[i][j] == 0)
-                {
-                    rowArr[i] = 1;
-                    colArr[j] = 1;
+    private static void betterApproach(int[][] matrix) {
+        printMatrix(matrix);
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[] r = new int[rows];
+        int[] c = new int[cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if(matrix[i][j] == 0){
+                    r[j] = 1;
+                    c[i] = 1;
                 }
             }
         }
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if(rowArr[i] == 1 || colArr[j] == 1)
-                {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if(r[j]==1 ||c[i] == 1){
                     matrix[i][j] = 0;
                 }
             }
         }
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                System.out.print(matrix[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println("====================");
+        System.out.println("============================");
+        printMatrix(matrix);
     }
 
-    private static void markRowCol(int[][] matrix, int m, int n) {
-        int row = matrix.length;
-        int col = matrix[0].length;
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (i == m || j == n) {
-                    matrix[i][j] = -1;
+    private static void bruteForce(int[][] matrix) {
+        printMatrix(matrix);
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if(matrix[i][j] == 0){
+                    // mark row as -1
+                    for (int l = 0; l < cols; l++) {
+                        if(matrix[i][l] != 0)
+                            matrix[i][l] = -1;
+                    }
+                    // mark the col as -1
+                    for (int m = 0; m < rows; m++) {
+                        if(matrix[m][j] != 0)
+                            matrix[m][j] = -1;
+                    }
                 }
             }
+        }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] == -1)
+                    matrix[i][j] = 0;
+            }
+        }
+        System.out.println("==============================");
+        printMatrix(matrix);
+    }
+
+    private static void printMatrix(int[][] matrix){
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        for (int[] ints : matrix) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(ints[j] + " ");
+            }
+            System.out.println();
         }
     }
 }
