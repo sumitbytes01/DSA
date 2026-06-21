@@ -12,38 +12,46 @@ public class _6_SubArraysWithGivenXor {
     }
 
     private static void optimalApproach() {
-        {
-            int[] nums = {4, 2, 2, 6, 4};
-            int k = 6;
-            int n = nums.length;
-            List<List<Integer>> finalList = new ArrayList<>();
-            HashMap<Integer, Integer> map = new HashMap<>();
-            int sum = 0;
-            for (int i = 0; i < n; i++) {
-                sum = sum ^ nums[i];
-                if (sum == k){
-                    List<Integer> list = new ArrayList<>();
-                    for (int l = 0; l <= i; l++) {
-                        list.add((nums[l]));
+        int[] nums = {4, 2, 2, 6, 4};
+        int k = 6;
+        List<List<Integer>> finalList = new ArrayList<>();
+        // prefixXor -> list of indices where it occurred
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
+
+        // XOR = 0 before array starts
+        map.put(0, new ArrayList<>());
+        map.get(0).add(-1);
+
+        int xor = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            xor ^= nums[i];
+
+            int rem = xor ^ k;
+
+            // If rem exists, all its indices form valid subarrays
+            if (map.containsKey(rem)) {
+
+                for (int startIndex : map.get(rem)) {
+
+                    List<Integer> subArray = new ArrayList<>();
+
+                    for (int j = startIndex + 1; j <= i; j++) {
+                        subArray.add(nums[j]);
                     }
-                    finalList.add(list);
-                }
-                if(map.containsKey(sum)){
-                    List<Integer> list = new ArrayList<>();
-                    int j = map.get(sum);
-                    for (int l = j; l <= i; l++) {
-                        list.add((nums[l]));
-                    }
-                    //finalList.add(list);
-                }
-                else {
-                    map.put(sum, i);
+
+                    finalList.add(subArray);
                 }
             }
-            System.out.println(finalList);
-            System.out.println("Count is : "+finalList.size());
+            // Store current index for current XOR
+            map.putIfAbsent(xor, new ArrayList<>());
+            map.get(xor).add(i);
         }
+        System.out.println(finalList);
+        System.out.println("Count is : " + finalList.size());
     }
+
 
     private static void betterApproach() {
         int[] nums = {4, 2, 2, 6, 4};
@@ -54,7 +62,7 @@ public class _6_SubArraysWithGivenXor {
             int sum = 0;
             for (int j = i; j < n; j++) {
                 sum = sum ^ nums[j];
-                if (sum == k){
+                if (sum == k) {
                     List<Integer> list = new ArrayList<>();
                     for (int l = i; l <= j; l++) {
                         list.add((nums[l]));
@@ -64,7 +72,7 @@ public class _6_SubArraysWithGivenXor {
             }
         }
         System.out.println(finalList);
-        System.out.println("Count is : "+finalList.size());
+        System.out.println("Count is : " + finalList.size());
     }
 
     private static void bruteForce() {
@@ -78,7 +86,7 @@ public class _6_SubArraysWithGivenXor {
                 for (int l = i; l <= j; l++) {
                     sum = sum ^ nums[l];
                 }
-                if (sum == k){
+                if (sum == k) {
                     List<Integer> list = new ArrayList<>();
                     for (int l = i; l <= j; l++) {
                         list.add((nums[l]));
@@ -88,6 +96,6 @@ public class _6_SubArraysWithGivenXor {
             }
         }
         System.out.println(finalList);
-        System.out.println("Count is : "+finalList.size());
+        System.out.println("Count is : " + finalList.size());
     }
 }

@@ -10,6 +10,7 @@ public class _2_ElementAppearsMoreThanNBy3Times {
         int array[] = {11, 33, 33, 11, 33, 11};
         // O(n^2)
         // at most 2 items can be such that they appear more than n/3 times
+        // no of items more than n/3 times -> n/3
         List<Integer> list = new ArrayList<>();
         int n = array.length;
         for (int i = 0; i < n; i++) {
