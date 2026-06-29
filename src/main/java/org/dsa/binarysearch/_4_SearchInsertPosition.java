@@ -4,14 +4,11 @@ public class _4_SearchInsertPosition {
     public static void main(String[] args) {
         int arr[] = {1,3,5,6};
         int x = 7;
-        // O(n)
-        int a = arr.length;
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] >= x){
-                a = i;
-            }
-        }
-        System.out.println("num is: "+a);
+        bruteForce(arr, x);
+        BinarySearchSolution(arr, x);
+    }
+
+    private static void BinarySearchSolution(int[] arr, int x) {
         // O(log n)
         int l = 0;
         int r = arr.length-1;
@@ -26,5 +23,17 @@ public class _4_SearchInsertPosition {
                 l = mid+1;
             }
         }
-        System.out.println(num);}
+        System.out.println(num);
+    }
+
+    private static void bruteForce(int[] arr, int x) {
+        // O(n)
+        int a = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] >= x){
+                a = i;
+            }
+        }
+        System.out.println("num is: "+a);
+    }
 }

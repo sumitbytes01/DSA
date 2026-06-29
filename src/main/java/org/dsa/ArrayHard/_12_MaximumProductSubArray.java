@@ -1,6 +1,6 @@
 package org.dsa.ArrayHard;
 
-public class MaximumProductSubArray {
+public class _12_MaximumProductSubArray {
     static void main() {
         int[] nums = {1,2,3,4,5,0};
         bruteForceSol(nums);

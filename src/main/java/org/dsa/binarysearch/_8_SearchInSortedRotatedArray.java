@@ -10,6 +10,7 @@ public class _8_SearchInSortedRotatedArray {
             int mid = l + (r - l) / 2;
             if (nums[mid] == target)
                 System.out.println(mid);
+
             // check if left half sorted
             if (nums[l] <= nums[mid]) {
                 if ((nums[l] <= target && nums[mid] > target)) {
@@ -18,6 +19,7 @@ public class _8_SearchInSortedRotatedArray {
                     l = mid + 1;
                 }
             }
+
             // else if right half is sorted
             else {
                 if ((nums[mid] < target && nums[r] >= target)) {

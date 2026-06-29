@@ -9,21 +9,23 @@ public class _2_LowerBound {
         linerSearch(nums, x);
         System.out.println("======");
         // O(logn)
-        x = 3;
+        x = 9;
         binarySearch(nums, x);
     }
 
     private static void binarySearch(int[] nums, int x) {
         int l = 0;
         int r = nums.length - 1;
+        int ans = nums.length;
         while (l <= r) {
             int mid = l + (r - l) / 2;
             if (nums[mid] >= x) {
-                System.out.println(mid);
+                ans = mid;
                 r = mid - 1;
             } else
                 l = mid + 1;
         }
+        System.out.println(ans);
     }
 
     private static void linerSearch(int[] nums, int x) {

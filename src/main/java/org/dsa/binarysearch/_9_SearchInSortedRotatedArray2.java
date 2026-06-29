@@ -10,6 +10,8 @@ public class _9_SearchInSortedRotatedArray2 {
             int mid = l + (r - l) / 2;
             if (nums[mid] == target)
                 System.out.println("TRUE");
+
+            // ignore duplicates if (arr[l] == arr[mid] == arr[r])
             if (nums[l] == nums[mid] && nums[mid] == nums[r]) {
                 l = l + 1;
                 r = r - 1;

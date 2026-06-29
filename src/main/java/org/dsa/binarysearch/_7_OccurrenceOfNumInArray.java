@@ -1,12 +1,12 @@
 package org.dsa.binarysearch;
 
-public class _7_OccuranceOfNumInArray {
+public class _7_OccurrenceOfNumInArray {
 
     static void main() {
-        // last occurance - first occurance +1
+        // last occurrence - first occurrence +1
         int[] arr = {5, 5, 5, 5, 5, 5};
         int target = 5;
-        // first occurance
+        // first occurrence
         int first = -1;
         int l = 0;
         int r = arr.length - 1;
@@ -21,7 +21,7 @@ public class _7_OccuranceOfNumInArray {
                 l = mid + 1;
             }
         }
-        // last occurance
+        // last occurrence
         int last = -1;
         l = 0;
         r = arr.length - 1;
@@ -38,6 +38,6 @@ public class _7_OccuranceOfNumInArray {
         }
         first = arr[first] == target ? first : -1;
         last = arr[last] == target ? last : -1;
-        System.out.println(last - first + 1);
+        System.out.println("Occurrence of "+target+" : "+(last - first + 1));
     }
 }

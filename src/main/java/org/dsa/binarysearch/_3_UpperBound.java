@@ -1,6 +1,6 @@
 package org.dsa.binarysearch;
 
-public class _3_UpperBound {
+public class  _3_UpperBound {
     public static void main(String[] args) {
         int arr[] = {3,5,8,9,15,19};
         int x = 9;

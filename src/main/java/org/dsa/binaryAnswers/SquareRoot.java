@@ -6,10 +6,11 @@ public class SquareRoot {
         System.out.println(floorSqrtOptimal(99));
     }
 
+    // T() - > {root n}
     public static int floorSqrt(int n) {
         if (n == 0 || n == 1) return n;
         int ans = 1;
-        for (int i = 1; i <= n / i; i++) {
+        for (int i = 1; i <= n / i; i++) { // i >= n/i to avoid overflow.
             ans = i;
         }
         return ans;
