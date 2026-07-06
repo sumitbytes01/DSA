@@ -1,6 +1,6 @@
 package org.dsa.binaryAnswers;
 
-public class SquareRoot {
+public class _1_SquareRoot {
     static void main() {
         System.out.println(floorSqrt(99));
         System.out.println(floorSqrtOptimal(99));

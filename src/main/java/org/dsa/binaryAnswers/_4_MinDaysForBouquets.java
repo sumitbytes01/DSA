@@ -2,7 +2,7 @@ package org.dsa.binaryAnswers;
 
 import java.util.Arrays;
 
-public class MinDaysForBouquets {
+public class _4_MinDaysForBouquets {
     static void main() {
         int[] arr = {7, 7, 7, 7, 13, 11, 12, 7};
         int m = 2, k = 3;

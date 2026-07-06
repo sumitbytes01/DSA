@@ -2,7 +2,7 @@ package org.dsa.binaryAnswers;
 
 import java.util.Arrays;
 
-public class KoKoEatingBanana {
+public class _3_KoKoEatingBanana {
     static void main() {
         int[] arr = {7, 15, 6, 3};
         int h = 8;
@@ -22,7 +22,7 @@ public class KoKoEatingBanana {
     private static int bruteEating(int[] arr, int h) {
         int max = Arrays.stream(arr).max().getAsInt();
         for (int i = 1; i <= max; i++) {
-            int totalHours = 0;
+            long totalHours = 0;
             for(int j = 0; j< arr.length; j++){
                 totalHours += (int) Math.ceil((double)arr[j]/i);
             }

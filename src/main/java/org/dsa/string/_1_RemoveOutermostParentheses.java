@@ -4,12 +4,11 @@ import java.util.Stack;
 
 public class _1_RemoveOutermostParentheses {
     public static void main(String[] args) {
-        _1_RemoveOutermostParentheses rop = new _1_RemoveOutermostParentheses();
         String s = "(()())(())";
         System.out.println(removeOutermostParantheses(s));
-        System.out.println(rop.removeOuterParentheses(s));
+        System.out.println(removeOuterParentheses(s));
 
-        System.out.println(rop.removeOuterParenthesesSimple(s));
+        System.out.println(removeOuterParenthesesSimple(s));
     }
 
     private static String removeOutermostParantheses(String s) {
@@ -32,7 +31,7 @@ public class _1_RemoveOutermostParentheses {
         return sb.toString();
     }
 
-    private String removeOuterParenthesesSimple(String s) {
+    private static String removeOuterParenthesesSimple(String s) {
         int counter = 0;
         StringBuilder sb = new StringBuilder();
         for (char ch : s.toCharArray()) {
