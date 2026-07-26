@@ -37,12 +37,13 @@ public class _5_IsoMorphicStrings {
         String t = "bar";
         if(s.length() != t.length())
             return false;
+        // TC - O(n^2)
         Map<Character, Character> map = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) { // O(n)
             char original = s.charAt(i);
             char replacement = t.charAt(i);
-            if(!map.containsKey(original)){
-                if(!map.containsValue(replacement)){
+            if(!map.containsKey(original)){ // O(1) constant time
+                if(!map.containsValue(replacement)){ // O(n)
                     map.put(s.charAt(i), t.charAt(i));
                 }
                 else
