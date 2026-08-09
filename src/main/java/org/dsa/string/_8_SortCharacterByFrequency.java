@@ -1,9 +1,8 @@
 package org.dsa.string;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class SortCharacterByFrequency {
+public class _8_SortCharacterByFrequency {
     public static void main(String[] args) {
         String str = "raaaajj";
         System.out.println(approach1(str));

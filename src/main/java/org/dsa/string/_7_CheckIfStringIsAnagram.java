@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CheckIfStringIsAnagram {
+public class _7_CheckIfStringIsAnagram {
     public static void main(String[] args) {
         String str1 = "aa";
         String str2 = "bb";
@@ -24,7 +24,7 @@ public class CheckIfStringIsAnagram {
             arr[ch - 'a']--;
         }
         for(int n: arr){
-            if(n != 1)
+            if(n != 0)
                 return false;
         }
         return true;

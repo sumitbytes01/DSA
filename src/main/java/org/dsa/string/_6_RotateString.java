@@ -1,6 +1,6 @@
 package org.dsa.string;
 
-public class RotateString {
+public class _6_RotateString {
     public static void main(String[] args) {
         String s = "rotation", goal = "tionrota";
         String g = goal;
@@ -13,7 +13,6 @@ public class RotateString {
             }
         }
         // simple solution
-
         System.out.println(rotateAndCheck(s, goal));
 
         System.out.println(optimalApproach(s,goal));
@@ -49,12 +48,6 @@ public class RotateString {
 
     private static String rotateOnce(String s) {
         char ch = s.charAt(0);
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1; i < s.length(); i++) {
-             sb.append(s.charAt(i));
-        }
-        sb.append(ch);
-        System.out.println(sb);
-    return sb.toString();
+        return s.substring(1) + ch;
     }
 }
