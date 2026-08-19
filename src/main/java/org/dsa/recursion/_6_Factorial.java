@@ -2,7 +2,7 @@ package org.dsa.recursion;
 
 public class _6_Factorial {
     public static void main(String[] args) {
-        int num =5;
+        int num = 5;
         int res = 1;
         for (int i = 1; i <=num; i++) {
             res = res*i;

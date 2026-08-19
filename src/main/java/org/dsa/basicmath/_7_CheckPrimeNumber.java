@@ -5,12 +5,10 @@ public class _7_CheckPrimeNumber {
         int num = 17;
         boolean flag = false;
         // improve next time with count;
-        for (int i = 2; i < Math.sqrt(num); i++) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
                 flag = true;
-                if(num / i != i){
-                    flag = true;
-                }
+                break;
             }
         }
         if (!flag) {
