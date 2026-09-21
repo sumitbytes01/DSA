@@ -1,6 +1,6 @@
-package org.dsa.binaryTree;
+package org.dsa.binaryTree.traversal;
 
-import com.sun.source.tree.Tree;
+import org.dsa.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

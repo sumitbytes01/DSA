@@ -1,4 +1,6 @@
-package org.dsa.binaryTree;
+package org.dsa.binaryTree.traversal;
+
+import org.dsa.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +26,9 @@ public class _4_PreOrderIterative {
         stack.push(root);
         while(!stack.isEmpty()){
             TreeNode node = stack.pop();
+            preOrder.add(node.data);
             if(node.right != null)
                 stack.push(node.right);
-            preOrder.add(node.data);
             if(node.left != null)
                 stack.push(node.left);
         }

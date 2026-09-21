@@ -1,4 +1,6 @@
-package org.dsa.binaryTree;
+package org.dsa.binaryTree.traversal;
+
+import org.dsa.binaryTree.TreeNode;
 
 public class _2_PreInPostRecursionIteration {
     static void main() {

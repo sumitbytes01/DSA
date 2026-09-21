@@ -1,4 +1,6 @@
-package org.dsa.binaryTree;
+package org.dsa.binaryTree.traversal;
+
+import org.dsa.binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,23 +21,25 @@ public class _5_InOrderIterative {
     private static List<Integer> inOrderIterative(TreeNode root) {
         List<Integer> inOrder = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
+
         TreeNode current = root;
 
-        while (current != null || !stack.isEmpty()){
+        while (current != null || !stack.isEmpty()) {
 
-            // go to leftmost
-            while (current!=null){
+            // Go to the leftmost node
+            while (current != null) {
                 stack.push(current);
                 current = current.left;
             }
 
-            // process node
+            // Process node
             current = stack.pop();
             inOrder.add(current.data);
 
-            // move to right subtree
+            // Move to right subtree
             current = current.right;
         }
-    return inOrder;
+
+        return inOrder;
     }
 }
