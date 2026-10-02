@@ -4,6 +4,8 @@ import org.dsa.binaryTree.TreeNode;
 
 public class _7_IdenticalTrees {
     static void main() {
+        // traversal  of any type on both tree should give same result
+
         TreeNode root1 = new TreeNode(1);
         root1.left = new TreeNode(2);
         root1.left.left = new TreeNode(3);

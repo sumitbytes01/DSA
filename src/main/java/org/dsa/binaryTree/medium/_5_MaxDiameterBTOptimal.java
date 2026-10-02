@@ -13,13 +13,8 @@ public class _5_MaxDiameterBTOptimal {
         root.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        System.out.println(diameterOfBinaryTree(root));
-    }
-
-    public static int diameterOfBinaryTree(TreeNode root) {
-        diameter = 0;
         solve(root);
-        return diameter;
+        System.out.println(diameter);
     }
 
     private static int solve(TreeNode root) {

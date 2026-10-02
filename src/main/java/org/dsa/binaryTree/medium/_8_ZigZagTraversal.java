@@ -19,14 +19,14 @@ public class _8_ZigZagTraversal {
         System.out.println(zigzagLevelOrder(root));
     }
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> zigzag = new ArrayList();
+        List<List<Integer>> zigzag = new ArrayList<>();
         if(root == null)
             return zigzag;
-        Deque<TreeNode> queue = new LinkedList();
+        Deque<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        Boolean flag = false;
+        boolean flag = false;
         while(!queue.isEmpty()){
-            List<Integer> list = new ArrayList();
+            List<Integer> list = new ArrayList<>();
             int size = queue.size();
             for(int i = 0; i<size; i++){
                 if(!flag) {

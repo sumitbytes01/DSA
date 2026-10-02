@@ -35,3 +35,26 @@ public class _4_PreOrderIterative {
     return preOrder;
     }
 }
+/*
+static List<Integer> preorder(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
+    Stack<TreeNode> stack = new Stack<>();
+
+    TreeNode current = root;
+
+    while (current != null || !stack.isEmpty()) {
+
+        // Go to extreme left
+        while (current != null) {
+            result.add(current.val);   // Process BEFORE going left
+            stack.push(current);
+            current = current.left;
+        }
+
+        // Left is exhausted, go right
+        current = stack.pop().right;
+    }
+
+    return result;
+}
+*/

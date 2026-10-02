@@ -5,9 +5,11 @@ public class _17 {
         int n = 4;
         for (int i = 1; i <= n; i++) {
             char ch = 'A';
+            // spaces
             for (int j = 0; j < n-i; j++) {
                 System.out.print(" ");
             }
+            //chars
             for (int j = 0; j < 2*i-1; j++) {
                 if(j<(2*i-1)/2)
                     System.out.print(ch++);
@@ -18,6 +20,24 @@ public class _17 {
             }
             for (int j = 0; j < n-i; j++) {
                 System.out.print(" ");
+            }
+            System.out.println();
+        }
+        simple();
+    }
+
+    private static void simple() {
+        int n = 5;
+        for(int i = 0; i<n;i++){
+            for(int j = 0;j<n-i-1;j++)
+                System.out.print(" ");
+            char ch = 'A';
+            for(int j = 0; j<2*i+1;j++){
+
+                if(j<i)
+                    System.out.print(ch++);
+                else
+                    System.out.print(ch--);
             }
             System.out.println();
         }
