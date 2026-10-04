@@ -2,7 +2,7 @@ package org.dsa.basicmath;
 
 public class _1_CountDigits {
     public static void main(String[] args) {
-        // O(logn+1)
+        // O(log10 N), because one digit is removed in each iteration.
         int num = 123432345;
         int count = 0;
         while(num!=0){

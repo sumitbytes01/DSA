@@ -7,6 +7,29 @@ public class _5_IsoMorphicStrings {
     public static void main(String[] args) {
          System.out.println(checkIsometric());
         System.out.println(betterApproach());
+        System.out.println(practiceApproach());
+    }
+
+    private static boolean practiceApproach() {
+        String s = "ab";
+        String t = "aa";
+        if(s.length() != t.length())
+            return false;
+        Map<Character, Character> map = new HashMap<>();
+        for(int i = 0; i<s.length(); i++){
+            char source = s.charAt(i);
+            char target = t.charAt(i);
+            if(map.containsKey(source)){
+                if(map.get(source) != target)
+                    return false;
+            }
+            else{
+                if(map.containsValue(target))
+                    return false;
+                map.put(source, target);
+            }
+        }
+        return true;
     }
 
     private static boolean betterApproach(){
